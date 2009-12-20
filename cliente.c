@@ -1,7 +1,7 @@
 /**
  * cliente.c
  *
- * Licensa: GPLv3
+ * Licença: GPLv3
  * Autores: Higor Euripedes
  *          Francilene Coelho
  *
