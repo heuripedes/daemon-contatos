@@ -50,16 +50,16 @@ void incluir ()/*{{{*/
 	printf("Anversario (dd/mm, ex: 31/09): ");
 	fgets(aniversario, 6, stdin);
 
-	if(nome[strlen(nome)-1] < ' ')
+	if(nome[strlen(nome)-1] < '\n')
 		nome[strlen(nome)-1] = 0;
 
-	if(endereco[strlen(endereco)-1] < ' ')
+	if(endereco[strlen(endereco)-1] < '\n')
 		endereco[strlen(endereco)-1] = 0;
 
-	if(email[strlen(email)-1] < ' ')
+	if(email[strlen(email)-1] < '\n')
 		email[strlen(email)-1] = 0;
 
-	if(aniversario[strlen(aniversario)-1] < ' ')
+	if(aniversario[strlen(aniversario)-1] < '\n')
 		aniversario[strlen(aniversario)-1] = 0;
 
 	char buf[1024] = {0};
@@ -107,7 +107,7 @@ void alterar ()/*{{{*/
 			break;
 	}
 
-	if(valor[strlen(valor)-1] < ' ')
+	if(valor[strlen(valor)-1] < '\n')
 		valor[strlen(valor)-1] = 0;
 	
 	char buf[1024] = {0};
@@ -144,7 +144,7 @@ void buscar ()/*{{{*/
 	printf("Informe o mes (dd, ex: 09): ");
 	fgets(data, 3, stdin);
 
-	if(data[strlen(data)-1] < ' ')
+	if(data[strlen(data)-1] < '\n')
 		data[strlen(data)-1] = 0;
 
 	char buf[1024] = {0};

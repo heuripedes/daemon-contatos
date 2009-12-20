@@ -292,6 +292,11 @@ void buscar (char *data)/*{{{*/
 {
 	char buf[1024] = {0};
 	int enviou = 0;
+	const char *formato =
+		"%03i - %s\n"
+		"\tAniversario.: %s\n"
+		"\tEmail.......: %s\n"
+		"\tEndereco....: %s\n";
 
 	printf("INFO: Buscando por '%s'...\n", data);
 	
@@ -307,7 +312,7 @@ void buscar (char *data)/*{{{*/
 
 		p1 = strstr(p2, data);
 
-		if (p1 && sprintf(buf, "%i - %s - %s\n", c->numero, c->aniversario, c->nome)) {
+		if (p1 && sprintf(buf, formato, c->numero, c->aniversario, c->nome, c->endereco)) {
 			enviar(buf);
 			enviou = 1;
 		}
