@@ -32,3 +32,4 @@ clean:
 
 .c.o: $(HEADERS)
 	$(CC) $(CFLAGS) -c $<
+
